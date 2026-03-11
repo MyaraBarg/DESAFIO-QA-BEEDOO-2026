@@ -80,72 +80,9 @@ Fluxo:
 
 # Pontos Críticos do Sistema para Testes
 
-Algumas funcionalidades do sistema possuem maior impacto no funcionamento da aplicação e na integridade dos dados. Por isso, exigem maior atenção durante a execução dos testes.
+Algumas funcionalidades do sistema possuem maior impacto no funcionamento da aplicação.
+Site não esta funcional para ser repassado ao usuário.
 
-## 1. Validação de Campos Obrigatórios
-
-Campos obrigatórios não devem permitir envio quando estiverem vazios.
-
-Testes importantes:
-
-- Submissão com todos os campos vazios
-- Submissão com apenas alguns campos preenchidos
-- Validação das mensagens de erro exibidas
-
----
-
-## 2. Validação de Tipo de Dados
-
-Alguns campos possuem regras específicas de preenchimento.
-
-Exemplos:
-
-- Campos que aceitam apenas **números**
-- Campos que aceitam apenas **letras**
-
-Devem ser testados cenários com dados inválidos para garantir que o sistema bloqueie entradas incorretas.
-
----
-
-## 3. Limite de Caracteres
-
-Campos com limite mínimo ou máximo de caracteres devem ser validados para evitar:
-
-- Dados incompletos
-- Dados excessivamente longos
-
-Testes devem incluir:
-
-- Valores abaixo do limite
-- Valores acima do limite
-- Valores exatamente no limite permitido
-
----
-
-## 4. Persistência de Dados
-
-É fundamental garantir que os cursos cadastrados continuem disponíveis após:
-
-- Logout do sistema
-- Novo login
-
-Esse teste garante que os dados foram armazenados corretamente no banco ou sistema de persistência.
-
----
-
-## 5. Integridade do Cadastro
-
-Após o cadastro, o sistema deve apresentar os dados corretamente.
-
-Validações:
-
-- O curso aparece na lista
-- As informações cadastradas estão corretas
-- Não houve alteração ou perda de dados
-
----
-
-## 6. Exclusão de Curso
 
 A funcionalidade de exclusão deve garantir que:
 
